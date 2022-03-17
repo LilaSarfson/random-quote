@@ -29,3 +29,23 @@ const quotes = [
         author: " Tyne Daly"
     }
 ];
+let vecesClic = 0; //el usuario ha hecho 0 veces click al inicio de la app.
+//Función para que me calcule una posición al azar dentro de quotes
+function getRandomQuote() {
+    let randomElement = quotes[Math.floor(Math.random() * quotes.length)];
+    return randomElement;
+}
+// 3. Cada vez que se capture un evento, considerar si hay que actualizar el estado de la aplicación; y si también hay que modificar la interfaz del usuario con nueva info
+
+
+let buttonQuote = document.querySelector("button");
+buttonQuote.addEventListener("click", function (e) {
+    vecesClic = vecesClic + 1
+    console.log(vecesClic);
+    let randomQuote = getRandomQuote().quote;
+    let motivationalParr = document.querySelector("#motivationalPar");
+    motivationalParr.textContent = randomQuote;
+    let randomAuthor = document.querySelector("#author");
+    randomAuthor.textContent = getRandomQuote().author;
+})
+

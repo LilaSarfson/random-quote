@@ -1,1 +1,17 @@
 /* Mis estilos */
+body{ 
+    height: 100vh;
+    width: 100vw;
+}
+
+.box{
+    height:60vh ;
+    width: 50vw;
+}
+.autor{
+    text-align: right;
+}
+.box-button button:hover {
+    background-color: #cde92d;
+    border: none;
+}
