@@ -40,12 +40,12 @@ function getRandomQuote() {
 
 let buttonQuote = document.querySelector("button");
 buttonQuote.addEventListener("click", function (e) {
-    vecesClic = vecesClic + 1
+    vecesClic = vecesClic + 1;
     console.log(vecesClic);
-    let randomQuote = getRandomQuote().quote;
+    let randomQuote = getRandomQuote();
     let motivationalParr = document.querySelector("#motivationalPar");
-    motivationalParr.textContent = randomQuote;
+    motivationalParr.textContent = randomQuote.quote;
     let randomAuthor = document.querySelector("#author");
-    randomAuthor.textContent = getRandomQuote().author;
+    randomAuthor.textContent = randomQuote.author;
 })
 
